@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LagrangePolynomial
@@ -19,24 +20,7 @@ namespace LagrangePolynomial
         }
         public double LagrangMethod(double[] xArray, double[] yArray, double x)
         {
-            //int n = xArray.Length;
-            //double result = 0;
-
-            //for (int i = 0; i < n; ++i)
-            //{
-            //    double term = yArray[i];
-
-            //    for (int j = 0; j < n; ++j)
-            //    {
-            //        if (i != j)
-            //        {
-            //            term *= (x - xArray[j]) / (xArray[i] - xArray[j]);
-            //        }
-            //    }
-
-            //    result += term;
-            //}
-            //return result;
+           
             int n = xArray.Length; // Количество узлов
             double result = 0.0;   // Инициализируем результат полинома
 
@@ -59,24 +43,14 @@ namespace LagrangePolynomial
         }
         private void Play_Click(object sender, EventArgs e)
         {
-            double[] xArray = new double[] { -1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1 };
-            double[] yArray = new double[] { 3.8461, 5.88, 0.1, 0.2, 0.5, 1, 0.49, 0.2, 0.1, 5.88, 3.8461 };
-            //try
-            //{
-            //    double x = Convert.ToDouble(textBox1.Text);
-            //}
-            //catch
-            //{
-            //    for (int i = 0; i < 11; i++)
-            //    {
-            //        //chart1.Series[0].Points.AddXY(x, LagrangMethod(xArray, yArray, x));
-            //        chart1.Series[0].Points.AddXY(xArray[i], yArray[i]);
-            //    }
-            //}
-            // Читаем текст из TextBox
-            string input = textBox1.Text;
+            
 
-
+            double[] xArray = new double[] { -1, -0.9, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 0.9, 1 };
+            double[] yArray = new double[] { 0.38461, 0.157872, 0.588, 0.1, 0.2, 0.5, 1, 0.49, 0.2, 0.1, 0.588, 0.157872, 0.38461 };
+            
+            
+            string input = textBox1.Text;// Читаем текст из TextBox
+            
             try
             {
                 // Разделяем строку по пробелам, удаляем пробелы и преобразуем в массив double
@@ -86,11 +60,9 @@ namespace LagrangePolynomial
                     .ToArray();
                 for (int i = 0; i < numbers.Length; i++)
                 {
-                    //chart1.Series[0].Points.AddXY(x, LagrangMethod(xArray, yArray, x));
                     chart1.Series[0].Points.AddXY(numbers[i], LagrangMethod(xArray, yArray, numbers[i]));
                 }
                 // Здесь вы можете использовать массив numbers по вашему усмотрению
-                //MessageBox.Show("Числа: " + string.Join(", ", numbers));
             }
             catch (FormatException)
             {
@@ -102,12 +74,8 @@ namespace LagrangePolynomial
             }
             for (int i = 0; i < 11; i++)
             {
-                //chart1.Series[0].Points.AddXY(x, LagrangMethod(xArray, yArray, x));
                 chart1.Series[1].Points.AddXY(xArray[i], yArray[i]);
             }
-            //chart1.Series[0].Points.AddXY(x, LagrangMethod(xArray, yArray, x));
-            //double x = Convert.ToDouble(textBox1.Text);
-            //textBox1.Text = LagrangMethod(xArray, yArray,x ).ToString();
 
         }
     }

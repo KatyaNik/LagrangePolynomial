@@ -1,0 +1,10 @@
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\bin\Debug\LagrangePolynomial.exe.config
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\bin\Debug\LagrangePolynomial.exe
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\bin\Debug\LagrangePolynomial.pdb
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.csproj.AssemblyReference.cache
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.Form1.resources
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.Properties.Resources.resources
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.csproj.GenerateResource.cache
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.csproj.CoreCompileInputs.cache
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.exe
+C:\Users\honor\source\repos\LagrangePolynomial\LagrangePolynomial\obj\Debug\LagrangePolynomial.pdb
